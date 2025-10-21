@@ -62,16 +62,7 @@ Top-level files and directories (important ones):
 
 ## Environment variables
 
-Create a `.env` file in `Backend/` with the following variables:
-
-```
-MONGO_URI=your_mongo_connection_string
-JWT_SECRET=some_secret_key
-PORT=5000
-MAILTRAP_USER=your_mailtrap_user
-MAILTRAP_PASS=your_mailtrap_password
-CLIENT_URL=http://localhost:5173
-```
+Create a `.env` file in `Backend/` 
 
 Adjust `CLIENT_URL` if the frontend runs on a different port.
 
