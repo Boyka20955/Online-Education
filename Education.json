@@ -1,0 +1,98 @@
+{
+  "info": {
+    "name": "E-Learning Auth API",
+    "_postman_id": "e-learning-auth-api",
+    "description": "Postman collection for E-Learning backend authentication APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Signup",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"Password123\",\n  \"name\": \"John Doe\"\n}"
+        },
+        "url": { "raw": "http://localhost:5000/api/auth/signup", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api", "auth", "signup"] }
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"Password123\"\n}"
+        },
+        "url": { "raw": "http://localhost:5000/api/auth/login", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api", "auth", "login"] }
+      }
+    },
+    {
+      "name": "Logout",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": { "raw": "http://localhost:5000/api/auth/logout", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api", "auth", "logout"] }
+      }
+    },
+    {
+      "name": "Verify Email",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"code\": \"123456\"\n}"
+        },
+        "url": { "raw": "http://localhost:5000/api/auth/verify-email", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api", "auth", "verify-email"] }
+      }
+    },
+    {
+      "name": "Forgot Password",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"test@example.com\"\n}"
+        },
+        "url": { "raw": "http://localhost:5000/api/auth/forgot-password", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api", "auth", "forgot-password"] }
+      }
+    },
+    {
+      "name": "Reset Password",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"password\": \"NewPassword123\"\n}"
+        },
+        "url": { "raw": "http://localhost:5000/api/auth/reset-password/:token", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api", "auth", "reset-password", ":token"] }
+      }
+    },
+    {
+      "name": "Check Auth",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Cookie", "value": "token={{token}}" }
+        ],
+        "url": { "raw": "http://localhost:5000/api/auth/check-auth", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api", "auth", "check-auth"] }
+      }
+    }
+  ]
+}
